@@ -9,16 +9,16 @@ button.addEventListener("click", () => {
 	}
 	else{
 		new Promise((resolve, reject) => {
-			setTimeout(() => {
 				if(age.value >= 18){
-					resolve(`Welcome, ${name.value}. you can vote.`)
+					setTimeout(() => {
+						resolve(`Welcome, ${name.value}. you can vote.`)
+					}, 4000);
 				}
 				else{
-					reject(`Oh sorry ${name.value}. you aren't old enough.`);
+					setTimeout(() => {
+						reject(`Oh sorry ${name.value}. you aren't old enough.`);
+					}, 4000);
 				}
-		}, 2000);
-})
-.then(message => alert(message))
-.catch(error => alert(error));
-}
+		}).then(message => alert(message)).catch(error => alert(error));
+	}
 });
