@@ -11,12 +11,12 @@ button.addEventListener("click", () => {
 		new Promise((resolve, reject) => {
 				if(age.value >= 18){
 					setTimeout(() => {
-						resolve(`Welcome, ${name.value}. you can vote.`)
+						resolve(`Welcome, ${name.value}. You can vote.`)
 					}, 4000);
 				}
 				else{
 					setTimeout(() => {
-						reject(`Oh sorry ${name.value}. you aren't old enough.`);
+						reject(`Oh sorry ${name.value}. You aren't old enough.`);
 					}, 4000);
 				}
 		}).then(message => alert(message)).catch(error => alert(error));
